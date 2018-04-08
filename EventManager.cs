@@ -1,18 +1,15 @@
-﻿/*  ╔═════════════════════════════╡  DinoTank 2018 ╞════════════════════════════╗            
-    ║ Authors:  Dmitrii Roets                       Email:    roetsd@icloud.com ║
-    ╟───────────────────────────────────────────────────────────────────────────╢░ 
-    ║ Purpose: Registers and invokes custom game events                         ║░
-    ║ Usage:   Insert the below OnEnable and OnDisable functions and register   ║░
-    ║          them for events. Use EventManager.TriggerEvent("EventName");     ║░
-    ║          to trigger all subscriers. In Order to make use of this class,   ║░
-    ║          put the below in the listenging class, awaiting to be triggered  ║░
-    ║          and we have to unsubscribe should the object be destroyed. It is ║░
-    ║          very important to subscribe/unsubscribe in OnEnable and OnDisable║░ 
-    ║          only. I order to make use of the class, put                      ║░
-    ║          EventManager.TriggerEvent("EventName"); in any script and it will║░
-    ║          call cause all susbscribers to call their respective methods.    ║░
-    ╚═══════════════════════════════════════════════════════════════════════════╝░
-       ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+/*  ╔═════════════════════════════════════════════╡  EventManager 2018 ╞═════════════════════════════════════════════════╗ 
+    ║ Authors:  Dmitrii Roets                                                           Email:    roetsd@icloud.com      ║
+    ╟────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╢░
+    ║ Purpose: Registers and invokes custom game events                                                                  ║░
+    ║ Usage:   Insert the below OnEnable and OnDisable functions and register them for events. Use                       ║░
+    ║          EventManager.TriggerEvent("EventName"); to trigger all subscriers. In Order to make use of this class, put║░
+    ║          the below in the listenging class, awaiting to be triggered and we have to unsubscribe should the object  ║░
+    ║          be destroyed. It is very important to subscribe/unsubscribe in OnEnable and OnDisable only. I order       ║░
+    ║          to make use of the class, put EventManager.TriggerEvent("EventName"); in any script and it will call cause║░
+    ║          all susbscribers to call their respective methods.                                                        ║░
+    ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝░
+       ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 */
 using System.Collections;
 using System.Collections.Generic;
